@@ -56,7 +56,8 @@ for alunocsv in alunoslist:
 #relatorio console
 print("\nRelatorio all ---------------") 
 for avaliado in avaliados:
-    print(avaliado, "-", avaliado.mediaGet(), "com", avaliado.total, "de", avaliado.contGet())
+    #print(avaliado, "-", avaliado.mediaGet(), "com", avaliado.totalGet(), "de", avaliado.contGet())
+    print(avaliado, f"- {avaliado.mediaGet():.1f}" , f"(com {avaliado.mediaComuGet():.1f}, {avaliado.mediaCompGet():.1f} e {avaliado.mediaResuGet():.1f}) de", avaliado.contGet(), "envio.")
 
 #file
 arquivoout = open('./Feedback360Parser/saida.txt', 'w')
